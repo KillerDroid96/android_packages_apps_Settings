@@ -15,6 +15,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+    <string name="security_settings_fingerprint_enroll_find_sensor_message_custom">It\u2019s on the back of your phone. Use any finger.</string>
+
     <!-- Encryption and credential -->
     <string name="custom_encryption_and_credential_settings_summary_on">Device is encrypted</string>
     <string name="custom_encryption_and_credential_settings_summary_off">Device is decrypted</string>
@@ -45,6 +48,9 @@
 
     <!-- DU version in About phone -->
     <string name="rom_version_title">DU version</string>
+
+    <!-- Notification log -->
+    <string name="notification_log_summary">Show notifications history log</string>
 
     <!-- MSIM Manual provisioning -->
     <string name="sim_enabler_summary"><xliff:g id="displayName">%1$s</xliff:g> is <xliff:g id="status" example="disabled">%2$s</xliff:g></string>
@@ -86,15 +92,7 @@
     <!-- Changelog -->
     <string name="duchangelog_title">Changelog</string>
     <string name="duchangelog_summary">Check to see what has changed</string>
-    <string name="duchangelog_weeklies">Changelog - Weeklies</string>
-    <string name="duchangelog_official">Changelog - Official</string>
-    <string name="warning_text">Please note that change logs generated here are summaries of commits merged into our source. For a full and detailed change log is recommended that you visit our github or gerrit.</string>
-    <string name="weeklies">Weeklies</string>
-    <string name="official">Official</string>
-    <string name="changelog_header_version"></string>
-    <string name="changelog_dialog_title">Attention</string>
-    <string name="changelog_dialog_message">Please enable WiFi/Mobile data to download the changelog from our server.</string>
-    <string name="changelog_dialog_ok">OK</string>
+    <string name="duchangelog_settings">Settings</string>
 
     <!-- Developer options toast insulter -->
     <string name="toast_insult_0">Hahaha, n00b!</string>
@@ -118,4 +116,17 @@
     <string name="fp_swipe_to_dismiss_notifications_title">Swipe fingerprint left or right to dismiss notifications</string>
     <!--  [CHAR LIMIT=160]-->
     <string name="fp_swipe_to_dismiss_notifications_summary">To dismiss your notifications, swipe left or right on the fingerprint sensor on the back of your phone.</string>
+
+    <!-- Fingerprint quick pulldown -->
+    <string name="fp_quick_pulldown_title">Fingerprint quick pulldown</string>
+    <string name="fp_quick_pulldown_summary">Expand the quick settings panel with only one swipe on the fingerprint sensor.</string>
+
+    <!-- Scramble PIN layout when unlocking -->
+    <string name="unlock_scramble_pin_layout_title">Scramble layout</string>
+    <string name="unlock_scramble_pin_layout_summary">Scramble PIN layout when unlocking device</string>
+
+    <!-- Font picker -->
+    <string name="font_picker_title">Font</string>
+    <string name="font_picker_progress">Applying new font\u2026</string>
+
 </resources>
