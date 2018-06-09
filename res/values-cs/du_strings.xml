@@ -15,6 +15,17 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <!-- Security dialog -->
+  <!-- DO NOT TRANSLATE -->
+  <string name="security_dialog_title">Bezpečnostní aktualizace</string>
+  <string name="security_dialog_neutral_button">Bezpečnostní bulletiny AOSP</string>
+  <string name="android_security_title">Úroveň opravy zabezpečení AOSP</string>
+  <string name="android_security_summary">Aktualizace zabezpečení systému Android představují sadu náplastí platformy Android a binárních souborů dodavatelů, které jí pomáhají spouštět. Vzhledem k tomu, že tyto binární soubory jsou uzavřený zdroj, musíme spoléhat na dodavatele, aby je dodávali výrobcům OEM a výrobci OEM je odesílali uživatelům a my je tak můžeme přidat do našich sestav. Jelikož tento proces vůbec neumíme řídit, chceme jasně uvést, že aktualizujeme úroveň opravy zabezpečení pouze v repozitářích, které pocházejí z Android Open Source Project. Obecně platí, že úroveň opravy zabezpečení dodavatele bude bez ohledu na úroveň opravy zabezpečení, která je v nejnovějším sestavení ROM.</string>
+  <string name="android_functional_updates_title">Účelné aktualizace</string>
+  <string name="android_functional_updates_summary">Kromě bezpečnostních aktualizací AOSP provádíme také účelné aktualizace Google. Jedná se o bezpečnostní záplaty, které Google vypouští pro své zařízení Pixel. Tyto záplaty řeší problém s funkčností, připojením, stabilitou a výkonem. Jelikož podporujeme více než jen zařízení Pixel, jsou tyto záplaty součástí všech našich podporovaných zařízení.</string>
+  <string name="vendor_security_title">Úroveň opravy dodavatele</string>
+  <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
+  <string name="security_settings_fingerprint_enroll_find_sensor_message_custom">To je na zadní straně telefonu. Použijte jakýkoliv prst.</string>
   <!-- Encryption and credential -->
   <string name="custom_encryption_and_credential_settings_summary_on">Zařízení je šifrováno</string>
   <string name="custom_encryption_and_credential_settings_summary_off">Zařízení je dešifrováno</string>
@@ -108,4 +119,8 @@
   <string name="unlock_scramble_pin_layout_summary">Přeházet rozložení pro zadání PINu při odemykání zařízení</string>
   <!-- Font picker -->
   <string name="font_picker_title">Písmo</string>
+  <string name="font_picker_progress">Aplikuji nové písmo\u2026</string>
+  <!-- Search -->
+  <string name="menu_search">Hledat aplikace</string>
+  <string name="menu_search_hint">Hledání aplikací\u2026</string>
 </resources>

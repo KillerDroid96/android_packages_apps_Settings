@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 The Dirty Unicorns Project
+ * Copyright (C) 2017 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package com.android.settings.deviceinfo;
+package com.android.settings.fuelgauge;
 
 import android.content.Context;
 import android.support.v7.preference.Preference;
@@ -23,18 +22,18 @@ import com.android.settings.R;
 import com.android.settings.core.PreferenceControllerMixin;
 import com.android.settingslib.core.AbstractPreferenceController;
 
-public class ChangelogPreferenceController extends AbstractPreferenceController implements
+public class SmartPixelsPreferenceController extends AbstractPreferenceController implements
         PreferenceControllerMixin {
 
-    private static final String KEY_DU_CHANGELOG = "du_changelog";
+    private static final String KEY_SMART_PIXELS = "smart_pixels";
 
-    public ChangelogPreferenceController(Context context) {
+    public SmartPixelsPreferenceController(Context context) {
         super(context);
     }
 
     @Override
     public String getPreferenceKey() {
-        return KEY_DU_CHANGELOG;
+        return KEY_SMART_PIXELS;
     }
 
     @Override
@@ -44,6 +43,6 @@ public class ChangelogPreferenceController extends AbstractPreferenceController 
 
     @Override
     public boolean isAvailable() {
-        return true;
+        return mContext.getResources().getBoolean(com.android.internal.R.bool.config_enableSmartPixels);
     }
 }
