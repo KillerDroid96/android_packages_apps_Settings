@@ -16,15 +16,16 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <!-- Security dialog -->
-  <string name="aosp_security_bulletin_url">https://source.android.com/security/bulletin/2018-04-01</string>
+  <!-- DO NOT TRANSLATE -->
   <string name="security_dialog_title">Güvenlik güncellemesi</string>
   <string name="security_dialog_neutral_button">AOSP Güvenlik Bültenleri</string>
   <string name="android_security_title">AOSP güvenlik yaması düzeyi</string>
   <string name="android_security_summary">Android güvenlik güncellemeleri, Android platformuna ve çalıştırılmasına yardımcı olan üretici ikili dosyalarına ait bir yamalar koleksiyonudur. Bu ikili dosyalar kapalı kaynak olduğundan, OEM\'lerİ tedarik etmek için satıcılara güvenmek zorundayız ve OEM\'leri kullanıcılara gönderecek ve bu sayede bunları oluşturduğumuz yapılara ekleyebileceğiz. Bu süreci hiçbir şekilde kontrol edemediğimizden, Android Açık Kaynak Projesinden gelen depolardan yalnızca güvenlik düzeltme ekini güncellediğimizi açıklığa kavuşturmak istiyoruz. Genel olarak, satıcı güvenlik yaması seviyesi, en yeni stok ROM\'unun hangi yama seviyesinde olursa olsun olacaktır.</string>
   <string name="android_functional_updates_title">Fonksiyonel güncellemeler</string>
   <string name="android_functional_updates_summary">AOSP güvenlik güncellemelerine ek olarak, Google\'ın işlevsel güncellemelerini de içerir. Bunlar, Google\'ın, bağlantı, kararlılık ve performans gibi işlevsellik sorunlarını gidermek adına Pixel cihazları için güvenlik güncellemelerine ek olarak uyguladığı yamalardır. Sadece Pixel cihazlarından daha fazlasını desteklediğimizden, tüm cihazlarımıza dahil edilir.</string>
+  <string name="vendor_security_title">Üretici yaması düzeyi</string>
   <!-- Message shown in fingerprint enrollment dialog to locate the sensor -->
-  <string name="security_settings_fingerprint_enroll_find_sensor_message_custom">Telefonunuzun arkasında. Herhangi bir parmak kullanın.</string>
+  <string name="security_settings_fingerprint_enroll_find_sensor_message_custom">Telefonunuzun arkasında. Herhangi bir parmağınızı kullanın.</string>
   <!-- Encryption and credential -->
   <string name="custom_encryption_and_credential_settings_summary_on">Cihaz şifreli</string>
   <string name="custom_encryption_and_credential_settings_summary_off">Cihaz şifresi çözüldü</string>
@@ -117,4 +118,7 @@
   <!-- Font picker -->
   <string name="font_picker_title">Yazı tipi</string>
   <string name="font_picker_progress">Yeni yazı tipi uygulanıyor\u2026</string>
+  <!-- Search -->
+  <string name="menu_search">Uygulamalarda ara</string>
+  <string name="menu_search_hint">Uygulamalar aranıyor\u2026</string>
 </resources>
