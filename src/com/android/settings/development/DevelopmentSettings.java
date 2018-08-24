@@ -399,7 +399,9 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mBackupManager = IBackupManager.Stub.asInterface(
                 ServiceManager.getService(Context.BACKUP_SERVICE));
         mWebViewUpdateService = WebViewFactory.getUpdateService();
-        mOemLockManager = (OemLockManager) getSystemService(Context.OEM_LOCK_SERVICE);
+        if (showEnableOemUnlockPreference(getContext())) {
+            mOemLockManager = (OemLockManager) getSystemService(Context.OEM_LOCK_SERVICE);
+        }
         mTelephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
         mUm = (UserManager) getSystemService(Context.USER_SERVICE);
@@ -535,6 +537,10 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
         mSimulateColorSpace = addListPreference(SIMULATE_COLOR_SPACE);
         mUSBAudio = findAndInitSwitchPref(USB_AUDIO_KEY);
         mForceResizable = findAndInitSwitchPref(FORCE_RESIZABLE_KEY);
+
+        if (android.os.Build.TYPE.equals("user")) {
+            disableForUser(mForceResizable);
+        }
 
         mImmediatelyDestroyActivities = (SwitchPreference) findPreference(
                 IMMEDIATELY_DESTROY_ACTIVITIES_KEY);
@@ -1085,7 +1091,7 @@ public class DevelopmentSettings extends RestrictedSettingsFragment
     //}
 
     private static boolean showEnableOemUnlockPreference(Context context) {
-        return context.getSystemService(Context.OEM_LOCK_SERVICE) != null;
+        return ServiceManager.getService(Context.OEM_LOCK_SERVICE) != null;
     }
 
     /**

@@ -101,9 +101,9 @@
   <string name="toast_insult_9">Profi tipp: Hagyja abba ezt!</string>
   <string name="toast_insult_10">Ön nem beszél Androidul???</string>
   <string name="toast_insult_11">Elnézést, miért ennyire hülye?!</string>
-  <string name="toast_insult_12">Talán ez az Android dolog nem Önnek való...</string>
+  <string name="toast_insult_12">Talán ez az Android dolog nem Önnek való…</string>
   <string name="toast_insult_13">Nincs hasznosabb tennivalója ennél?!</string>
-  <string name="toast_insult_14">Ez az oka annak, hogy senki sem szereti Önt...</string>
+  <string name="toast_insult_14">Na ezért nem szereti Önt senki…</string>
   <string name="toast_insult_15">Még mindig ezzel próbálkozik?!</string>
   <!-- [CHAR LIMIT=80]-->
   <string name="fp_swipe_to_dismiss_notifications_title">Értesítések elutasítása ujjlenyomat csúsztatásával</string>
@@ -121,4 +121,5 @@
   <!-- Search -->
   <string name="menu_search">Alkalmazások keresése</string>
   <string name="menu_search_hint">Alkalmazások keresése\u2026</string>
+  <string name="custom_ambient_display_summary">A Kiterjesztett képernyő haladó beállításai</string>
 </resources>

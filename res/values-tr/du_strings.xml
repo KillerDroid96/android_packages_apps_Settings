@@ -101,9 +101,9 @@
   <string name="toast_insult_9">Profesyonel ipucu: Bunu yapmayı bırak!</string>
   <string name="toast_insult_10">Andorid\'den bahset miyorsun???</string>
   <string name="toast_insult_11">Neden bu kadar aptalsın?!</string>
-  <string name="toast_insult_12">Belki bu Android olayı senin için değil...</string>
+  <string name="toast_insult_12">Belki bu Android olayı senin için değil…</string>
   <string name="toast_insult_13">Yapacak daha iyi bir şeyin yok mu?!</string>
-  <string name="toast_insult_14">Bu yüzden kimse seni sevmiyor...</string>
+  <string name="toast_insult_14">Bu yüzden kimse seni sevmiyor…</string>
   <string name="toast_insult_15">Deniyor musun?!</string>
   <!-- [CHAR LIMIT=80]-->
   <string name="fp_swipe_to_dismiss_notifications_title">Bildirimleri kapatmak için parmak izini sola veya sağa kaydırın</string>
@@ -121,4 +121,5 @@
   <!-- Search -->
   <string name="menu_search">Uygulamalarda ara</string>
   <string name="menu_search_hint">Uygulamalar aranıyor\u2026</string>
+  <string name="custom_ambient_display_summary">Gelişmiş ortam ekranını yapılandır</string>
 </resources>

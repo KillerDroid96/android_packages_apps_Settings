@@ -20,6 +20,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -79,6 +80,9 @@ public class HighPowerDetail extends InstrumentedDialogFragment implements OnCli
                 ? R.string.ignore_optimizations_on_desc : R.string.ignore_optimizations_off_desc);
         view.setClickable(true);
         view.setOnClickListener(this);
+        if (!on && mBackend.isSysWhitelisted(mPackageName)) {
+            view.setEnabled(false);
+        }
         return (Checkable) view;
     }
 
@@ -88,7 +92,9 @@ public class HighPowerDetail extends InstrumentedDialogFragment implements OnCli
                 .setTitle(mLabel)
                 .setNegativeButton(R.string.cancel, null)
                 .setView(R.layout.ignore_optimizations_content);
-        b.setPositiveButton(R.string.done, this);
+        if (!mBackend.isSysWhitelisted(mPackageName)) {
+            b.setPositiveButton(R.string.done, this);
+        }
         return b.create();
     }
 
@@ -155,7 +161,8 @@ public class HighPowerDetail extends InstrumentedDialogFragment implements OnCli
 
     public static CharSequence getSummary(Context context, String pkg) {
         PowerWhitelistBackend powerWhitelist = PowerWhitelistBackend.getInstance();
-        return context.getString(powerWhitelist.isWhitelisted(pkg) ? R.string.high_power_on
+        return context.getString(powerWhitelist.isSysWhitelisted(pkg) ? R.string.high_power_system
+                : powerWhitelist.isWhitelisted(pkg) ? R.string.high_power_on
                 : R.string.high_power_off);
     }
 
@@ -167,6 +174,11 @@ public class HighPowerDetail extends InstrumentedDialogFragment implements OnCli
         args.putBoolean(ARG_DEFAULT_ON, defaultToOn);
         fragment.setArguments(args);
         fragment.setTargetFragment(caller, requestCode);
-        fragment.show(caller.getFragmentManager(), HighPowerDetail.class.getSimpleName());
+        if(caller != null){
+            FragmentManager fmg =  caller.getFragmentManager();
+            if(fmg != null && !fmg.isStateSaved() && !fmg.isDestroyed()){
+                fragment.show(fmg, HighPowerDetail.class.getSimpleName());
+            }
+        }
     }
 }
